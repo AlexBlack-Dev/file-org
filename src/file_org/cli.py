@@ -13,27 +13,10 @@ def _join(items: list[tuple[Path, Path]]) -> str:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(
-        prog="file-org",
-        description="Organise files in a directory by category",
-    )
-    parser.add_argument(
-        "directory",
-        nargs="?",
-        default=".",
-        type=Path,
-        help="Directory to organise (default: current)",
-    )
-    parser.add_argument(
-        "--dry-run", "-n",
-        action="store_true",
-        help="Preview changes without moving files",
-    )
-    parser.add_argument(
-        "--undo", "-u",
-        action="store_true",
-        help="Revert the last organise",
-    )
+    parser = argparse.ArgumentParser(prog="file-org")
+    parser.add_argument("directory", nargs="?", default=".", type=Path)
+    parser.add_argument("--dry-run", "-n", action="store_true")
+    parser.add_argument("--undo", "-u", action="store_true")
     args = parser.parse_args(argv)
 
     target = args.directory.resolve()
@@ -45,11 +28,7 @@ def main(argv: list[str] | None = None) -> int:
     verb = "Undo" if args.undo else ("Would organise" if args.dry_run else "Organise")
     print(f"{verb} {target}")
 
-    result = organise(
-        directory=target,
-        dry_run=args.dry_run,
-        undo=args.undo,
-    )
+    result = organise(directory=target, dry_run=args.dry_run, undo=args.undo)
 
     if result.moved:
         tag = "Would move" if args.dry_run else ("Reverted" if args.undo else "Moved")

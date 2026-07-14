@@ -66,23 +66,16 @@ def organise(
         if snapshot_path.exists():
             existing = json.loads(snapshot_path.read_text())
             snapshot_data = existing + snapshot_data
-        snapshot_path.write_text(
-            json.dumps(snapshot_data, indent=2)
-        )
+        snapshot_path.write_text(json.dumps(snapshot_data, indent=2))
 
     return result
 
 
-def _undo(
-    snapshot_path: Path,
-    dry_run: bool,
-) -> OrganiseResult:
+def _undo(snapshot_path: Path, dry_run: bool) -> OrganiseResult:
     result = OrganiseResult()
 
     if not snapshot_path.exists():
-        result.errors.append(
-            (snapshot_path, "No snapshot found to undo")
-        )
+        result.errors.append((snapshot_path, "No snapshot found to undo"))
         return result
 
     snapshot = json.loads(snapshot_path.read_text())
