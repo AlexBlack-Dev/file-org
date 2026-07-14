@@ -1,18 +1,18 @@
-﻿# file-org
+# file-org
 
 ![preview](images/preview.svg)
 
-A CLI tool that organises files in a directory by category â€” images, documents, audio, video, archives, code and more.
+A CLI tool that organises files in a directory by category - images, documents, audio, video, archives, code and more.
 
 ## Install
 
-`ash
+```bash
 pip install file-org
-`
+```
 
 ## Usage
 
-`ash
+```bash
 # organise the current directory
 file-org
 
@@ -24,7 +24,7 @@ file-org --dry-run
 
 # undo last organise
 file-org --undo
-`
+```
 
 ## Categories
 
@@ -42,4 +42,4 @@ file-org --undo
 
 ## License
 
-MIT Â© [Alex Black](https://github.com/AlexBlack-Dev)
+MIT (c) [Alex Black](https://github.com/AlexBlack-Dev)
