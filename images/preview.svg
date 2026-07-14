@@ -1,0 +1,12 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#08080f"/>
+  <rect x="60" y="40" width="680" height="320" rx="12" fill="#0e0e12" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="400" y="95" text-anchor="middle" fill="#5B9BFF" font-family="system-ui" font-size="28" font-weight="700">file-org</text>
+  <rect x="100" y="120" width="120" height="28" rx="6" fill="#1a1a2e"/><text x="160" y="139" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="monospace" font-size="12">file-org .</text>
+  <rect x="100" y="160" width="600" height="24" rx="4" fill="#0f1419"/><text x="110" y="177" fill="rgba(255,255,255,0.25)" font-family="monospace" font-size="11">Would organise C:\Users\me\Downloads</text>
+  <rect x="100" y="196" width="240" height="24" rx="4" fill="#0f1419"/><text x="110" y="213" fill="rgba(255,255,255,0.35)" font-family="monospace" font-size="11">Would move 12 file(s):</text>
+  <text x="110" y="241" fill="#5B9BFF" font-family="monospace" font-size="11">  photo.jpg  →  Images/photo.jpg</text>
+  <text x="110" y="259" fill="#5B9BFF" font-family="monospace" font-size="11">  doc.pdf    →  Documents/doc.pdf</text>
+  <text x="110" y="277" fill="rgba(255,255,255,0.3)" font-family="monospace" font-size="11">  song.mp3  →  Audio/song.mp3</text>
+  <text x="110" y="295" fill="rgba(255,255,255,0.3)" font-family="monospace" font-size="11">  video.mp4  →  Video/video.mp4</text>
+</svg>
