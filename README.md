@@ -1,4 +1,4 @@
-﻿# file-org
+# file-org
 
 ![preview](images/preview.svg)
 
